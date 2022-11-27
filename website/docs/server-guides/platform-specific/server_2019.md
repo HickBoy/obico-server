@@ -57,4 +57,9 @@ $dockerComposeVersion = "1.26.2"
 Invoke-WebRequest "https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-Windows-x86_64.exe" -UseBasicParsing -OutFile $Env:ProgramFiles\docker\docker-compose.exe
 ```
 
+### Fix Possible Typo
+```
+If ```Docker Version``` gives error about "Docker-credential-desktop.exe executable file not found in $PATH", then edit ~/.docker/config.json and change ```credsStore``` to ```credStore```
+See: https://forums.docker.com/t/docker-credential-desktop-exe-executable-file-not-found-in-path-using-wsl2/100225
+
 ### [Get the code and start the server](../../configure) {#get-the-code-and-start-the-server}
